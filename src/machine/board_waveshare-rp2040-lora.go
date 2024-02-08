@@ -57,7 +57,7 @@ const (
 
 // Onboard LEDs
 const (
-	LED = GPIO25
+	LED = D25
 )
 
 // I2C pins
@@ -67,6 +67,18 @@ const (
 
 	I2C1_SDA_PIN Pin = D2
 	I2C1_SCL_PIN Pin = D3
+)
+
+// LoRa default pins
+const (
+	LORA_CS = GPIO13
+	LORA_CLK = GPIO14
+	LORA_MOSI = GPIO15
+	LORA_DIO1 = GPIO16
+	LORA_ANT_SW = GPIO17
+	LORA_BUSY = GPIO18
+	LORA_RESET = GPIO23
+	LORA_MISO = GPIO24
 )
 
 // SPI pins
