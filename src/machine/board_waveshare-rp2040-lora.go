@@ -74,11 +74,11 @@ const (
 	LORA_CS = GPIO13
 	LORA_CLK = GPIO14
 	LORA_MOSI = GPIO15
+	LORA_MISO = GPIO24
 	LORA_DIO1 = GPIO16
 	LORA_ANT_SW = GPIO17
 	LORA_BUSY = GPIO18
 	LORA_RESET = GPIO23
-	LORA_MISO = GPIO24
 )
 
 // SPI pins
@@ -87,9 +87,10 @@ const (
 	SPI0_SDO_PIN Pin = D3
 	SPI0_SDI_PIN Pin = D4
 
-	SPI1_SCK_PIN Pin = D10
-	SPI1_SDO_PIN Pin = D11
-	SPI1_SDI_PIN Pin = D12
+	// SPI1 is designated for the sx1262 LoRa radio
+	SPI1_SCK_PIN Pin = LORA_CLK
+	SPI1_SDO_PIN Pin = LORA_MOSI
+	SPI1_SDI_PIN Pin = LORA_MISO
 )
 
 // Onboard crystal oscillator frequency, in MHz.
